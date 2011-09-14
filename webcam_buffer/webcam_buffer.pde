@@ -51,8 +51,6 @@ class VideoBuffer
   PImage getFrame()
   {
     int i = int(random(s));
-    //int i = cur - 1;
-    //i = i < 0 ? 0 : i;
     return b[i];
   }
 }
