@@ -6,15 +6,14 @@ VideoBuffer vb;
 void setup() 
 {
   size(200, 200);
-  c = new Capture(this, width, height, 30);
   vb = new VideoBuffer(30, width, height);
+  c = new Capture(this, width, height, 30);
 }
 
 void captureEvent(Capture c)
 {
   c.read();
-  if (vb != null)
-    vb.addFrame(c);
+  vb.addFrame(c);
 }
 
 void draw()
